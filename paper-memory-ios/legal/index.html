@@ -42,7 +42,7 @@
   </div>
 </header>
 <main><article id="document" aria-live="polite"></article></main>
-<footer>Public source: <code>LegalDocuments.json</code>. The operator name, support email, and public URL must be finalized before App Store submission.</footer>
+<footer>PaperMemory legal and support documents · support.runpet@gmail.com</footer>
 <script>
   const source = "../Packages/PaperMemoryModules/Sources/Localization/Resources/LegalDocuments.json";
   const state = {
@@ -65,12 +65,75 @@
     if (inList) html += "</ul>";
     return html;
   }
+  function removeTrailingSection(body, heading) {
+    const marker = `\n\n${heading}`;
+    const index = body.indexOf(marker);
+    return index >= 0 ? body.slice(0, index) : body;
+  }
+  function contactFooterBody(body, language, documentKind, operatorName, supportEmail) {
+    if (documentKind !== "privacy" && documentKind !== "terms") return body;
+
+    let normalized = body;
+    let operatorLine;
+    let footer;
+
+    if (language === "ko") {
+      operatorLine = `운영자: ${operatorName}`;
+      if (documentKind === "privacy") {
+        normalized = removeTrailingSection(normalized, "## 12. 문의");
+      } else {
+        normalized = normalized
+          .replace("## 10. 준거와 문의", "## 10. 준거")
+          .replace(` 문의: ${supportEmail}`, "");
+      }
+      footer = `## 운영자 및 문의\n\n운영자: ${operatorName}\n\n이메일: ${supportEmail}`;
+    } else if (language === "ja") {
+      operatorLine = `運営者：${operatorName}`;
+      if (documentKind === "privacy") {
+        normalized = removeTrailingSection(normalized, "## 12. お問い合わせ");
+      } else {
+        normalized = normalized
+          .replace("## 10. 適用される権利と連絡先", "## 10. 適用される権利")
+          .replace(`お問い合わせ：${supportEmail}`, "");
+      }
+      footer = `## 運営者・お問い合わせ\n\n運営者：${operatorName}\n\nメール：${supportEmail}`;
+    } else {
+      operatorLine = `Operator: ${operatorName}`;
+      if (documentKind === "privacy") {
+        normalized = removeTrailingSection(normalized, "## 12. Contact");
+      } else {
+        normalized = normalized
+          .replace("## 10. Applicable rights and contact", "## 10. Applicable rights")
+          .replace(` Contact: ${supportEmail}`, "");
+      }
+      footer = `## Operator and Contact\n\nOperator: ${operatorName}\n\nEmail: ${supportEmail}`;
+    }
+
+    normalized = normalized
+      .split("\n")
+      .filter(line => line.trim() !== operatorLine)
+      .join("\n")
+      .trim();
+
+    while (normalized.includes("\n\n\n")) {
+      normalized = normalized.replaceAll("\n\n\n", "\n\n");
+    }
+
+    return `${normalized}\n\n${footer}\n`;
+  }
   function render() {
     if (!state.payload) return;
     const activeDocument = state.payload.documents[state.language]?.[state.document] || state.payload.documents.en[state.document];
-    const body = activeDocument.body
+    const substitutedBody = activeDocument.body
       .replaceAll("{{OPERATOR_NAME}}", state.payload.operatorName)
       .replaceAll("{{SUPPORT_EMAIL}}", state.payload.supportEmail);
+    const body = contactFooterBody(
+      substitutedBody,
+      state.language,
+      state.document,
+      state.payload.operatorName,
+      state.payload.supportEmail
+    );
     documentElement.innerHTML = markdown(body);
     window.document.title = `${activeDocument.title} · PaperMemory`;
     statusElement.textContent = `${state.payload.effectiveDate} · ${state.language.toUpperCase()}`;
