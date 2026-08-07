@@ -1,9 +1,6 @@
 {
   "schemaVersion": 1,
   "effectiveDate": "2026-08-07",
-  "operatorName": "박정현",
-  "supportEmail": "support.runpet@gmail.com",
-  "publicBaseURL": "https://jhyh940823-dev.github.io/paper-memory-ios/legal/",
   "documents": {
     "ko": {
       "privacy": {
@@ -17,10 +14,6 @@
       "support": {
         "title": "고객 지원",
         "body": "# 고객 지원\n\n지원 언어: 한국어, English, 日本語\n\n## 기록과 동기화\n기록은 앱에 저장되고 지원되는 경우 같은 Apple 계정의 기기 간에 iCloud·CloudKit으로 동기화될 수 있습니다. 동기화는 Apple 계정, iCloud 설정, 네트워크 및 저장공간 상태의 영향을 받을 수 있습니다.\n\n## 삭제와 복구\n보관함에서 개별 기록을 삭제하거나 설정에서 기억을 종류별로 삭제할 수 있습니다. 로컬에만 남은 기록은 앱 삭제나 기기 초기화 후 복구되지 않을 수 있습니다. CloudKit에 정상 동기화된 기록은 다시 동기화될 수 있지만 복구를 보장하지 않습니다.\n\n## 광고\n무료 이용자에게 일부 화면에서 Google Mobile Ads 배너가 표시될 수 있습니다. 글쓰기·설정 등 일부 화면에는 광고를 표시하지 않으며 감기 플러스가 활성화되면 앱의 배너 광고가 제거됩니다.\n\n## 광고 개인정보 선택\nGoogle UMP가 개인정보 선택 항목을 요구하는 경우 설정에서 광고 개인정보 선택 메뉴가 표시됩니다. 해당 메뉴에서 적용 가능한 선택을 다시 확인하거나 변경할 수 있습니다.\n\n## 유료 구매\n감기 플러스 월간·연간 자동 갱신 구독을 제공합니다. 현재 가격은 App Store 구매 화면을 따르며 결제는 Apple 계정으로 처리됩니다. App Store 계정 설정에서 구독을 관리·취소할 수 있고 앱에서 구매 복원을 지원합니다.\n\n## 사진과 문의\n앱은 iOS 시스템 사진 선택 화면을 사용하며 사용자가 직접 선택한 사진만 전달받습니다. 문의할 때 앱 버전, iOS 버전, 기기 모델과 재현 순서를 알려주면 도움이 됩니다. 일기 내용이나 개인 사진은 첨부하지 않아도 됩니다.\n"
-      },
-      "openSource": {
-        "title": "오픈소스 및 라이선스",
-        "body": "# 오픈소스 및 라이선스\n\n검토 기준일: 2026년 8월 7일\n\n앱은 Apple 플랫폼 프레임워크와 Google Mobile Ads SDK, Google User Messaging Platform 등 제3자 구성요소를 사용합니다. 각 구성요소는 해당 권리자의 약관, 정책 및 라이선스 고지를 따릅니다.\n"
       }
     },
     "en": {
@@ -35,10 +28,6 @@
       "support": {
         "title": "Support",
         "body": "# Support\n\nSupported languages: 한국어, English, 日本語\n\n## Records and synchronization\nRecords are stored by the app and, when supported, may synchronize across devices using the same Apple Account through iCloud/CloudKit. Synchronization depends on Apple Account, iCloud settings, network availability, and storage status.\n\n## Deletion and recovery\nDelete individual records from archive detail screens or use erase controls in Settings. Records that remained only local may not be recoverable after app deletion or device reset. CloudKit-synchronized records may synchronize again, but recovery is not guaranteed.\n\n## Advertising\nFree users may see Google Mobile Ads banners on certain screens. The app intentionally hides ads on some screens such as writing and Settings. Active Gamgi Plus subscriptions remove the app's banner ads.\n\n## Advertising privacy choices\nWhen Google UMP requires a privacy-options entry point, Settings displays an advertising privacy option where applicable choices can be reviewed or changed.\n\n## Paid purchases\nThe app offers monthly and yearly auto-renewable Gamgi Plus subscriptions. Current prices are shown on the App Store purchase screen. Payment is processed through the user's Apple Account, subscriptions can be managed or canceled in App Store account settings, and the app supports Restore Purchases.\n\n## Photos and support\nThe app uses the iOS system photo picker and receives only photos explicitly selected by the user. When contacting support, include app version, iOS version, device model, and reproduction steps. Diary text or private photos are not required.\n"
-      },
-      "openSource": {
-        "title": "Open Source & Licenses",
-        "body": "# Open Source and Licenses\n\nReview date: August 7, 2026\n\nThe app uses Apple platform frameworks and third-party components including the Google Mobile Ads SDK and Google User Messaging Platform. Each component remains subject to its owner's applicable terms, policies, and license notices.\n"
       }
     },
     "ja": {
@@ -53,10 +42,6 @@
       "support": {
         "title": "サポート",
         "body": "# サポート\n\n対応言語：한국어、English、日本語\n\n## 記録と同期\n記録はアプリに保存され、対応している場合は同じApple Accountの端末間でiCloud・CloudKitを通じて同期されることがあります。同期はApple Account、iCloud設定、ネットワーク、保存容量の影響を受けます。\n\n## 削除と復元\n保管庫から個別に削除したり、設定で種類別に削除できます。ローカルにしかない記録はアプリ削除や端末初期化後に復元できない場合があります。CloudKitに同期された記録は再同期される場合がありますが、復元は保証されません。\n\n## 広告\n無料利用者には一部の画面でGoogle Mobile Adsのバナーが表示される場合があります。記録作成や設定など一部画面では広告を表示しません。感記Plusが有効になるとアプリのバナー広告は削除されます。\n\n## 広告のプライバシー選択\nGoogle UMPがプライバシー選択の入口を必要とする場合、設定に広告のプライバシー選択項目が表示され、適用可能な選択を確認・変更できます。\n\n## 有料購入\n感記Plusの月間・年間自動更新サブスクリプションを提供します。現在の価格はApp Store購入画面に表示されます。料金はApple Accountを通じて処理され、App Storeのアカウント設定から管理・解約できます。アプリでは購入の復元も利用できます。\n\n## 写真とお問い合わせ\nアプリはiOSのシステム写真ピッカーを使用し、利用者が選択した写真だけを受け取ります。お問い合わせの際はアプリ版、iOS版、端末モデル、再現手順をお知らせください。日記本文や個人的な写真は不要です。\n"
-      },
-      "openSource": {
-        "title": "オープンソースとライセンス",
-        "body": "# オープンソースとライセンス\n\n確認日：2026年8月7日\n\nアプリではAppleプラットフォームのフレームワークに加え、Google Mobile Ads SDK、Google User Messaging Platformなどの第三者コンポーネントを利用します。各コンポーネントには権利者の規約、ポリシー、ライセンス表示が適用されます。\n"
       }
     }
   }
