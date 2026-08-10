@@ -10,15 +10,27 @@
   <header class="site-header"><div class="header-inner"><a class="brand" href="../../index.html">RUNTORY</a><nav class="lang-nav" aria-label="Language"><a href="../../ko/location-terms/index.html" hreflang="ko">한국어</a> <a href="../../en/location-terms/index.html" hreflang="en">English</a> <a href="index.html" hreflang="ja" aria-current="page">日本語</a></nav></div></header>
   <main><article>
     <h1>位置情報サービス利用規約</h1>
-    <p class="meta">最終更新: 2026-08-05</p>
+    <p class="meta">最終更新: 2026-08-10</p>
     <nav class="page-nav" aria-label="Page"><a href="../privacy/index.html">プライバシーポリシー</a> <a href="../terms/index.html">利用規約</a> <a href="index.html">位置情報サービス利用規約</a> <a href="../support/index.html">サポート</a> <a href="../account-deletion/index.html">アカウント削除</a> <a href="../subscription/index.html">サブスクリプション</a></nav>
-    <section class="clause"><h2>1. サービス</h2><p>RUNTORY は、利用者が明示的に開始した屋外ランニング中に GPS を使用し、経路・距離・時間・ペースを計算します。画面ロック中または他のアプリを使用中でも、OS が許可する範囲で位置情報を使用することがあります。屋内ランニングは位置情報なしで利用できます。</p></section>
-    <section class="clause"><h2>2. 保存・バックアップ・復元</h2><p>生の GPS 経路は端末内に最大 365 日間保存されることがあります。完了したランニングの経路座標は、ログイン中の Firebase アカウント単位の圧縮アセットとして Firebase Storage にバックアップ・復元されることがあります。経路アセットには、ポイント順序、緯度、経度、UTC 時刻が含まれることがあります。</p><p>Firestore には保存先、ハッシュ、サイズ、形式、関連識別子など、復元に必要なマニフェストが保存されることがあります。公開ダウンロード URL や端末上のローカル絶対パスはリモートマニフェストに保存しません。生成されたオーバーレイ、結果画像、地図スナップショット、共有用エクスポートファイルは現在の経路バックアップ対象ではありません。</p><p>経路データは利用者が要求したアカウントのバックアップ・復元機能を提供するために処理され、広告目的または第三者への販売目的では提供されません。</p></section>
-    <section class="clause"><h2>3. 削除・同意撤回</h2><p>利用者は個別の記録を削除するか、設定で位置情報利用への同意を撤回できます。撤回すると端末に保存された生の経路座標を削除し、新しい屋外 GPS ランニングの開始を制限します。記録の完全性と安全のため、進行中のランニングでは撤回が制限されることがあり、終了後に撤回できます。</p><p>アカウント削除時には、Firebase Auth アカウント、リモートプロフィール、友だちデータ、構造化バックアップ、アカウント単位の Firebase Storage 経路アセットの削除を要求します。一時的なネットワークまたはサーバーエラーが発生した場合、安全な再試行状態が維持されることがあります。距離・時間・ペースなどの要約は別途削除されるまで維持されることがあります。</p></section>
-    <section class="clause"><h2>4. 外部処理</h2><p>Firebase Storage と Firestore は、アカウント単位の経路バックアップ・復元に使用されます。Apple、Firebase その他のサービス提供者による処理は、プライバシーポリシーおよび各提供者のポリシーに従います。RUNTORY は正確な経路データを医療、緊急救助、ナビゲーション、広告ターゲティング目的には使用しません。</p></section>
-    <section class="clause"><h2>5. 運営者およびお問い合わせ</h2><ul><li>位置情報サービス提供者: 멍스토어</li><li>代表者および位置情報管理責任者: 박정현</li><li>事業者登録番号: 465-04-03240</li><li>住所: 서울시 금천구 두산로3길 17</li><li>お問い合わせ: <a href="mailto:support.runpet@gmail.com">support.runpet@gmail.com</a></li></ul></section>
-    <section class="clause"><h2>6. 利用上の限界</h2><p>RUNTORY は 14 歳以上の方のみ利用できます。GPS とセンサーの結果は、端末、ネットワーク、周辺環境により不正確、遅延、または消失することがあります。RUNTORY は医療、緊急救助、ナビゲーションサービスではありません。</p></section>
+
+    <section class="clause"><h2>1. 目的</h2><p>本規約は、멍스토어 が提供する RUNTORY の屋外 GPS ランニング、ルートのバックアップ・復元その他の位置情報サービスの利用条件と、個人位置情報に関する利用者の権利を定めます。</p></section>
+
+    <section class="clause"><h2>2. サービス内容</h2><p>利用者が屋外ランニングを開始して GPS の準備が始まった時点から、RUNTORY は位置情報を利用してルート、距離、時間、ペースを計算します。画面ロック中または他のアプリを使用中でも、OS が許可する範囲で位置情報を利用する場合があります。屋内ランニングは位置情報なしで利用できます。</p></section>
+
+    <section class="clause"><h2>3. 個人位置情報の保存・バックアップ</h2><p>生の GPS ルートは端末内に最大365日保存される場合があります。完了したランニングのルート座標は、ログイン中アカウント単位の圧縮アセットとして Firebase Storage にバックアップ・復元される場合があり、ポイント順序、緯度、経度、UTC 時刻が含まれる場合があります。</p><p>Firestore には保存先、ハッシュ、サイズ、形式、関連識別子など復元に必要なマニフェストが保存される場合があります。ルート情報はランニング記録および利用者が要求したバックアップ・復元を提供するために処理し、広告ターゲティングや第三者への販売には使用しません。</p><p>個人位置情報は、サービス提供目的の達成または利用者による削除・同意撤回後、別の法的保存根拠がある場合を除き、実質的な復元・再利用が困難となる方法で廃棄します。</p></section>
+
+    <section class="clause"><h2>4. 位置情報の収集・利用・提供事実確認記録</h2><p>RUNTORY は韓国の位置情報法に基づき、位置情報の収集・利用事実を確認できる記録を自動的に作成・保存します。確認記録には、収集要求者、収集・利用時刻、収集方法、取得経路、利用方法などが含まれ、<strong>緯度・経度など実際の位置座標自体は含みません。</strong></p><p>RUNTORY の確認記録の保存期間は<strong>記録日から6か月</strong>です。期間終了後に自動廃棄し、利用者が位置情報利用への同意を撤回した場合またはアカウントを削除した場合、別の法的保存根拠がない当該利用者の確認記録は6か月前でも速やかに廃棄します。</p><p>確認記録は現在安全なサーバー保存領域で管理します。サービス終了など運用上必要な場合は暗号化された別の保存媒体へ移管することがありますが、保存期間、アクセス制御、期間終了後の廃棄義務は同様に適用されます。</p></section>
+
+    <section class="clause"><h2>5. 個人位置情報に関する権利と行使方法</h2><p>利用者はいつでも位置情報の収集・利用への同意の全部または一部を撤回し、収集・利用の一時停止を求めることができます。また、本人に関する位置情報の収集・利用・提供事実確認記録の閲覧・通知を求め、誤りがある場合は訂正を求めることができます。</p><p>権利行使は RUNTORY の<strong>設定 → データ管理</strong>、メール <a href="mailto:support.runpet@gmail.com">support.runpet@gmail.com</a>、電話 <a href="tel:+821026828230">010-2682-8230</a> から行えます。本人確認のため必要最小限の認証を求める場合があります。</p></section>
+
+    <section class="clause"><h2>6. 削除・同意撤回</h2><p>利用者は個別のランニング記録を削除するか、設定から位置情報利用への同意を撤回できます。撤回時には関連する端末内の生ルート座標と、別の法的保存根拠がないサーバー側の位置利用事実確認記録を削除し、新しい屋外 GPS ランニングの開始を制限します。進行中のランニングでは記録の整合性のため終了後に撤回手続きを完了する場合があります。</p><p>アカウント削除時には Firebase Auth アカウント、リモートプロフィール・フレンド・構造化バックアップ、アカウント単位のルート・写真アセット、および当該アカウントの位置利用事実確認記録を整理します。一時的なネットワーク・サーバーエラーがある場合、完了まで安全な再試行状態が維持されることがあります。</p></section>
+
+    <section class="clause"><h2>7. 外部処理および第三者提供</h2><p>Firebase Storage と Firestore はアカウント単位のルートのバックアップ・復元および位置利用事実確認記録の管理に使用し、Firebase Cloud Functions は確認記録の作成・削除と保存期間管理に使用します。処理委託・国外処理の詳細は <a href="../privacy/index.html">プライバシーポリシー</a> をご確認ください。</p><p>現在 RUNTORY は、個人位置情報を広告ターゲティングまたは販売目的で利用せず、個人位置情報を第三者へ提供する位置情報サービス機能を運営していません。将来そのような機能を導入する場合は、法令上必要な同意・通知手続きを事前に適用します。</p></section>
+
+    <section class="clause"><h2>8. 事業者および位置情報管理責任者</h2><ul><li>位置情報サービス提供者: 멍스토어</li><li>代表者: 박정현</li><li>位置情報管理責任者: 박정현</li><li>事業者登録番号: 465-04-03240</li><li>住所: 서울시 금천구 두산로3길 17</li><li>電話: <a href="tel:+821026828230">010-2682-8230</a></li><li>メール: <a href="mailto:support.runpet@gmail.com">support.runpet@gmail.com</a></li></ul></section>
+
+    <section class="clause"><h2>9. 利用上の限界</h2><p>RUNTORY は14歳以上の方のみ利用できます。GPS とセンサーの結果は端末、ネットワーク、周辺環境により不正確、遅延、または消失することがあります。RUNTORY は医療、緊急救助、ナビゲーションサービスではありません。</p></section>
   </article></main>
-  <footer class="site-footer"><p>RUNTORY · 最終更新: 2026-08-05</p><div class="operator-footer operator-info"><p>事業者名: 멍스토어 · 代表者: 박정현 · 事業者登録番号: 465-04-03240<br>住所: 서울시 금천구 두산로3길 17 · お問い合わせ: <a href="mailto:support.runpet@gmail.com">support.runpet@gmail.com</a></p></div></footer>
+  <footer class="site-footer"><p>RUNTORY · 最終更新: 2026-08-10</p><div class="operator-footer operator-info"><p>事業者名: 멍스토어 · 代表者: 박정현 · 事業者登録番号: 465-04-03240<br>住所: 서울시 금천구 두산로3길 17 · 電話: <a href="tel:+821026828230">010-2682-8230</a> · メール: <a href="mailto:support.runpet@gmail.com">support.runpet@gmail.com</a></p></div></footer>
 </body>
 </html>
