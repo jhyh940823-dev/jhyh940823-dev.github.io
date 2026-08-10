@@ -1,0 +1,71 @@
+name: Import RUNTORY public site once
+
+on:
+  push:
+    branches:
+      - release/runtory-public-site
+    paths:
+      - .github/workflows/runtory_import_once.yml
+
+permissions:
+  contents: write
+
+jobs:
+  import-runtory:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout public site branch
+        uses: actions/checkout@v4
+        with:
+          ref: release/runtory-public-site
+          fetch-depth: 0
+
+      - name: Import exact verified RUNTORY legal site
+        shell: bash
+        run: |
+          set -euo pipefail
+          SOURCE_HEAD='8c6d0365e2691b651718e0eb7ec8aaa458603298'
+          SOURCE_DIR="$RUNNER_TEMP/runpet-legal"
+
+          git clone --no-tags https://github.com/jhyh940823-dev/runpet-legal.git "$SOURCE_DIR"
+          git -C "$SOURCE_DIR" checkout --detach "$SOURCE_HEAD"
+          test "$(git -C "$SOURCE_DIR" rev-parse HEAD)" = "$SOURCE_HEAD"
+
+          rm -rf runtory
+          mkdir -p runtory
+
+          cp "$SOURCE_DIR/index.html" runtory/index.html
+          cp -R "$SOURCE_DIR/assets" runtory/assets
+          cp -R "$SOURCE_DIR/ko" runtory/ko
+          cp -R "$SOURCE_DIR/en" runtory/en
+          cp -R "$SOURCE_DIR/ja" runtory/ja
+
+          if [ -d "$SOURCE_DIR/privacy" ]; then
+            cp -R "$SOURCE_DIR/privacy" runtory/privacy
+          fi
+          if [ -f "$SOURCE_DIR/404.html" ]; then
+            cp "$SOURCE_DIR/404.html" runtory/404.html
+          fi
+
+          # Guard the app that is already in App Store review.
+          test -d paper-memory-ios
+          git diff --name-only -- paper-memory-ios app-ads.txt | grep -q . && {
+            echo 'ERROR: protected existing public-site files changed'
+            git diff --name-only -- paper-memory-ios app-ads.txt
+            exit 1
+          } || true
+
+          git add runtory
+          test -n "$(git diff --cached --name-only -- runtory)"
+
+          echo "SOURCE_HEAD=$SOURCE_HEAD"
+          echo "IMPORTED_FILES=$(git diff --cached --name-only -- runtory | wc -l | tr -d ' ')"
+
+      - name: Commit imported RUNTORY site
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m '[Site] Import verified RUNTORY legal and support pages'
+          git push origin HEAD:release/runtory-public-site
