@@ -1,36 +1,13 @@
 <!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>位置情報サービス利用規約 — RUNTORY</title>
-  <link rel="stylesheet" href="../../assets/styles.css">
-</head>
-<body>
-  <header class="site-header"><div class="header-inner"><a class="brand" href="../../index.html">RUNTORY</a><nav class="lang-nav" aria-label="Language"><a href="../../ko/location-terms/index.html" hreflang="ko">한국어</a> <a href="../../en/location-terms/index.html" hreflang="en">English</a> <a href="index.html" hreflang="ja" aria-current="page">日本語</a></nav></div></header>
-  <main><article>
-    <h1>位置情報サービス利用規約</h1>
-    <p class="meta">最終更新: 2026-08-10</p>
-    <nav class="page-nav" aria-label="Page"><a href="../privacy/index.html">プライバシーポリシー</a> <a href="../terms/index.html">利用規約</a> <a href="index.html">位置情報サービス利用規約</a> <a href="../support/index.html">サポート</a> <a href="../account-deletion/index.html">アカウント削除</a> <a href="../subscription/index.html">サブスクリプション</a></nav>
-
-    <section class="clause"><h2>1. 目的</h2><p>本規約は、멍스토어 が提供する RUNTORY の屋外 GPS ランニング、ルートのバックアップ・復元その他の位置情報サービスの利用条件と、個人位置情報に関する利用者の権利を定めます。</p></section>
-
-    <section class="clause"><h2>2. サービス内容</h2><p>利用者が屋外ランニングを開始して GPS の準備が始まった時点から、RUNTORY は位置情報を利用してルート、距離、時間、ペースを計算します。画面ロック中または他のアプリを使用中でも、OS が許可する範囲で位置情報を利用する場合があります。屋内ランニングは位置情報なしで利用できます。</p></section>
-
-    <section class="clause"><h2>3. 個人位置情報の保存・バックアップ</h2><p>生の GPS ルートは端末内に最大365日保存される場合があります。完了したランニングのルート座標は、ログイン中アカウント単位の圧縮アセットとして Firebase Storage にバックアップ・復元される場合があり、ポイント順序、緯度、経度、UTC 時刻が含まれる場合があります。</p><p>Firestore には保存先、ハッシュ、サイズ、形式、関連識別子など復元に必要なマニフェストが保存される場合があります。ルート情報はランニング記録および利用者が要求したバックアップ・復元を提供するために処理し、広告ターゲティングや第三者への販売には使用しません。</p><p>個人位置情報は、サービス提供目的の達成または利用者による削除・同意撤回後、別の法的保存根拠がある場合を除き、実質的な復元・再利用が困難となる方法で廃棄します。</p></section>
-
-    <section class="clause"><h2>4. 位置情報の収集・利用・提供事実確認記録</h2><p>RUNTORY は韓国の位置情報法に基づき、位置情報の収集・利用事実を確認できる記録を自動的に作成・保存します。確認記録には、収集要求者、収集・利用時刻、収集方法、取得経路、利用方法などが含まれ、<strong>緯度・経度など実際の位置座標自体は含みません。</strong></p><p>RUNTORY の確認記録の保存期間は<strong>記録日から6か月</strong>です。期間終了後に自動廃棄し、利用者が位置情報利用への同意を撤回した場合またはアカウントを削除した場合、別の法的保存根拠がない当該利用者の確認記録は6か月前でも速やかに廃棄します。</p><p>確認記録は現在安全なサーバー保存領域で管理します。サービス終了など運用上必要な場合は暗号化された別の保存媒体へ移管することがありますが、保存期間、アクセス制御、期間終了後の廃棄義務は同様に適用されます。</p></section>
-
-    <section class="clause"><h2>5. 個人位置情報に関する権利と行使方法</h2><p>利用者はいつでも位置情報の収集・利用への同意の全部または一部を撤回し、収集・利用の一時停止を求めることができます。また、本人に関する位置情報の収集・利用・提供事実確認記録の閲覧・通知を求め、誤りがある場合は訂正を求めることができます。</p><p>権利行使は RUNTORY の<strong>設定 → データ管理</strong>、メール <a href="mailto:support.runpet@gmail.com">support.runpet@gmail.com</a>、電話 <a href="tel:+821026828230">010-2682-8230</a> から行えます。本人確認のため必要最小限の認証を求める場合があります。</p></section>
-
-    <section class="clause"><h2>6. 削除・同意撤回</h2><p>利用者は個別のランニング記録を削除するか、設定から位置情報利用への同意を撤回できます。撤回時には関連する端末内の生ルート座標と、別の法的保存根拠がないサーバー側の位置利用事実確認記録を削除し、新しい屋外 GPS ランニングの開始を制限します。進行中のランニングでは記録の整合性のため終了後に撤回手続きを完了する場合があります。</p><p>アカウント削除時には Firebase Auth アカウント、リモートプロフィール・フレンド・構造化バックアップ、アカウント単位のルート・写真アセット、および当該アカウントの位置利用事実確認記録を整理します。一時的なネットワーク・サーバーエラーがある場合、完了まで安全な再試行状態が維持されることがあります。</p></section>
-
-    <section class="clause"><h2>7. 外部処理および第三者提供</h2><p>Firebase Storage と Firestore はアカウント単位のルートのバックアップ・復元および位置利用事実確認記録の管理に使用し、Firebase Cloud Functions は確認記録の作成・削除と保存期間管理に使用します。処理委託・国外処理の詳細は <a href="../privacy/index.html">プライバシーポリシー</a> をご確認ください。</p><p>現在 RUNTORY は、個人位置情報を広告ターゲティングまたは販売目的で利用せず、個人位置情報を第三者へ提供する位置情報サービス機能を運営していません。将来そのような機能を導入する場合は、法令上必要な同意・通知手続きを事前に適用します。</p></section>
-
-    <section class="clause"><h2>8. 事業者および位置情報管理責任者</h2><ul><li>位置情報サービス提供者: 멍스토어</li><li>代表者: 박정현</li><li>位置情報管理責任者: 박정현</li><li>事業者登録番号: 465-04-03240</li><li>住所: 서울시 금천구 두산로3길 17</li><li>電話: <a href="tel:+821026828230">010-2682-8230</a></li><li>メール: <a href="mailto:support.runpet@gmail.com">support.runpet@gmail.com</a></li></ul></section>
-
-    <section class="clause"><h2>9. 利用上の限界</h2><p>RUNTORY は14歳以上の方のみ利用できます。GPS とセンサーの結果は端末、ネットワーク、周辺環境により不正確、遅延、または消失することがあります。RUNTORY は医療、緊急救助、ナビゲーションサービスではありません。</p></section>
-  </article></main>
-  <footer class="site-footer"><p>RUNTORY · 最終更新: 2026-08-10</p><div class="operator-footer operator-info"><p>事業者名: 멍스토어 · 代表者: 박정현 · 事業者登録番号: 465-04-03240<br>住所: 서울시 금천구 두산로3길 17 · 電話: <a href="tel:+821026828230">010-2682-8230</a> · メール: <a href="mailto:support.runpet@gmail.com">support.runpet@gmail.com</a></p></div></footer>
-</body>
-</html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>位置情報サービス利用規約 — RUNTORY</title><link rel="stylesheet" href="../../assets/styles.css"></head><body><header class="site-header"><div class="header-inner"><a class="brand" href="../../index.html">RUNTORY</a><nav class="lang-nav" aria-label="Language"><a href="../../ko/location-terms/index.html">한국어</a> <a href="../../en/location-terms/index.html">English</a> <a href="index.html" aria-current="page">日本語</a></nav></div></header><main><article><h1>位置情報サービス利用規約</h1><p class="meta">最終更新: 2026年8月20日 · 韓国法上の開示については韓国語版を原文とします。</p><nav class="page-nav" aria-label="Page"><a href="../privacy/index.html">プライバシー</a> <a href="../terms/index.html">利用規約</a> <a href="index.html">位置情報規約</a> <a href="../support/index.html">サポート</a> <a href="../account-deletion/index.html">アカウント削除</a> <a href="../subscription/index.html">サブスクリプション</a></nav>
+<nav class="clause-toc" aria-label="目次"><p class="toc-label">目次</p><ol><li><a href="#clause-1">第1条 目的・事業者</a></li><li><a href="#clause-2">第2条 サービス</a></li><li><a href="#clause-3">第3条 収集・利用</a></li><li><a href="#clause-4">第4条 保有・削除</a></li><li><a href="#clause-5">第5条 利用事実記録</a></li><li><a href="#clause-6">第6条 利用者の権利</a></li><li><a href="#clause-7">第7条 第三者・外部処理</a></li><li><a href="#clause-8">第8条 14歳未満・保護措置</a></li><li><a href="#clause-9">第9条 責任者・問い合わせ</a></li></ol></nav>
+<section class="clause" id="clause-1"><h2>第1条（目的と事業者）</h2><p>本規約はRUNTORYの屋外GPSランニング記録およびアカウント経路バックアップ・復元等の位置情報サービスを定めます。提供者: 멍스토어、代表者: 박정현、住所: 서울시 금천구 두산로3길 17、問い合わせ: <a href="mailto:support.runpet@gmail.com">support.runpet@gmail.com</a>。</p></section>
+<section class="clause" id="clause-2"><h2>第2条（サービス内容）</h2><p>利用者が屋外ランを開始すると、端末位置情報で経路、距離、時間、ペースを記録します。iOSが許可する場合、アクティブなラン中はバックグラウンドでも処理が続くことがあります。屋内ランはGPS経路なしで利用できます。ログイン済みiOS利用者は完了ラン経路を含む場合があるCloudKitバックアップ・復元を利用できます。</p></section>
+<section class="clause" id="clause-3"><h2>第3条（個人位置情報の収集・利用）</h2><p>正確な位置、座標順序・時刻とそこから算出する経路・距離・ペース等を、利用者が要求したラン記録、記録閲覧、バックアップ・復元のために使用します。現在、正確なGPS経路をフレンドランキングや広告へ提供する目的では使用しません。</p></section>
+<section class="clause" id="clause-4"><h2>第4条（保有と削除）</h2><p>完了ランのローカル生GPS経路は365日を超えた後の次回通常起動時に削除されます。非位置の要約は残る場合があります。CloudKitバックアップは別のライフサイクルで正確な経路を含む場合があり、現在のアカウント削除は利用者のバックアップzoneを削除します。目的がなくなった個人位置情報は適用法令に従い削除します。</p></section>
+<section class="clause" id="clause-5"><h2>第5条（位置利用事実確認資料）</h2><p>韓国の位置情報法令上の義務と利用者権利のため、屋外位置利用の最小事実を記録する場合があります。生の緯度・経度は含めず、主体・イベントのハッシュ、時刻、利用方法、第三者提供有無等を記録します。現在の記録には発生時点から6か月の保有期限を記録し、同意撤回・アカウント削除時には該当利用者の削除手続きを行います。</p></section>
+<section class="clause" id="clause-6"><h2>第6条（利用者の権利）</h2><p>利用者は位置同意の全部または一部を撤回し、一時停止を要求できます。また本人の位置収集・利用・提供事実資料、および法令により第三者提供された理由・内容の閲覧・通知、誤りの訂正を要求できます。アプリの機能、iOS権限設定または <a href="mailto:support.runpet@gmail.com">support.runpet@gmail.com</a> を利用できます。</p></section>
+<section class="clause" id="clause-7"><h2>第7条（第三者提供・外部処理）</h2><p>現在、利用者が指定した第三者へ正確な位置を常時共有するサービスは提供しません。CloudKitは利用者アカウントのバックアップ・復元のために経路を処理します。現在のFriendsと広告境界には正確なGPS経路を渡しません。</p></section>
+<section class="clause" id="clause-8"><h2>第8条（14歳未満と保護措置）</h2><p>14歳以上のみを対象とし、14歳未満の位置情報処理のための法定代理人同意フローを提供しません。最小取扱い、アクセス制御、owner確認、正確な経路のリリースログ制限、利用事実記録、削除・撤回手続きを適用します。</p></section>
+<section class="clause" id="clause-9"><h2>第9条（位置情報管理責任者と問い合わせ）</h2><p>位置情報管理責任者: 박정현。事業者登録番号: 465-04-03240。住所: 서울시 금천구 두산로3길 17。問い合わせ: <a href="mailto:support.runpet@gmail.com">support.runpet@gmail.com</a>。</p></section>
+</article></main><footer class="site-footer"><p>RUNTORY · 最終更新: 2026年8月20日</p><div class="operator-footer operator-info"><p>事業者: 멍스토어 · 代表者: 박정현 · 事業者登録番号: 465-04-03240<br>住所: 서울시 금천구 두산로3길 17 · 問い合わせ: <a href="mailto:support.runpet@gmail.com">support.runpet@gmail.com</a></p></div></footer></body></html>
