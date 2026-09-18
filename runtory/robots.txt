@@ -1,0 +1,3 @@
+# Run Pet public legal/support site
+User-agent: *
+Allow: /
